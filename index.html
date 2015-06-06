@@ -8,9 +8,20 @@
 <link rel="stylesheet" type="text/css" href="styles/styles.css" />
 <link rel="shortcut icon" href="img/favicon.png" />
 <script src="https://togetherjs.com/togetherjs-min.js"></script>
+<style type="text/css">
+	#TutorTool{
+		position:fixed;
+		bottom:1%;
+		left:40%;
+		border:none;
+		background:rgb(180,0,180);
+		color:rgb(255,255,255);
+		font-weight:bold;
+	}
+</style>
 </head>
 <body>
-	<button onclick="TogetherJS(this); return false;">Start TutorTool</button>
+	<button id="TutorTool" onclick="TogetherJS(this); return false;">Start TutorTool</button>
 <div id="drop_zone">
 	<div style="margin-top:70px;">
 		<span style="font-size: 40px;">DROP</span> 
