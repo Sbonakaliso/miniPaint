@@ -154,6 +154,9 @@ input[type="button"]{
 	top:195px;
 	z-index:10;
 	}
+#layers_container{
+	margin-right:8em;
+}
 #canvas_layers{
 	margin-left:105px;
 	}
