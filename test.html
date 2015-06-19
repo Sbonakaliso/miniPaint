@@ -59,14 +59,15 @@
   <h3><span class="glyphicon glyphicon-briefcase"></span> How everything works</h3>
   <div class="row">
   <div class="col-md-4">
-    <p>This is an online tutorial platform for all subjects. To start a tutorial, click the <span class="label label-default"><span class="glyphicon glyphicon-home"></span> TutorialRoom</span>
+    <p>This is an online tutorial platform for all subjects. After quick setup, you and your tutor/student will see the same
+     paint document, where you can both draw and write. You can talk to each other by voice or text. To start a tutorial, click the <span class="label label-default"><span class="glyphicon glyphicon-home"></span> TutorialRoom</span>
     on the navigation bar. <br>After the page has loaded, you will then see a purple button <span id="st">Start TutorTool</span>, click it.
     Wait a moment and a light blue menu will appear on the right. The <span class="label label-info"><span class="glyphicon glyphicon-user"></span></span> on top is your profile info
     and the one below that is where you add your friend (they are self explanatory)...</p>
   </div>
   <div class="col-md-4"> 
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat.</p>
+    <p>Use the <span class="label label-info"><span class="glyphicon glyphicon-user"></span><span class="glyphicon glyphicon-plus"></span></span> to get a room URL
+     that you will have to share with your counterpart (via email, IM or Facebook).</p>
   </div>
   <div class="col-md-4"> 
     <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -74,29 +75,5 @@
   </div>
 </div>
 </div>
- <div id='game'>
-    <form id='user-input'>
-        <input type='text' id='guess-value' placeholder='1-100'></input>
-        <button id='submit'>Submit</button>
-    </form>
-     <h4 id='guess-count'>Attempts left: <span id="attempts">6</span></h4> 
-</div>
-
-<h4 id='checker'>The value entered is <span id="value">?</span></h4>
-
-<input type="button" id="myButt" value="Show Value" />
-<script>
-  var guess;
-$('#submit').on("click", function (evnt) {
-    guess = $('#guess-value').val();
-    $("#value").text(guess);
-    alert(guess);
-    evnt.preventDefault();
-});
-
-$('#myButt').click(function(){
-   alert( guess ); 
-});
-</script>
   </body>
 </html>
