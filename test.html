@@ -74,40 +74,28 @@
   </div>
 </div>
 </div>
-<form>
-  <input id="firstName"><input id="lastName"><input id="phoneNumber"><input id="address"><button class="submitForm">Submit</button>
-</form>
-<div id="output"></div>
-<script>
-  $(document).ready(function() {
-    $('.submitForm').on('click',function(event){
-        event.preventDefault();
+ <form id="form1" name="form1" method="post" action="">
+ <label>Please type in a message
+ <input type="text" name="msg" id="msg" />
+ </label>
+ <label>and your name
+ <input type="text" name="name" id="name" />
+ </label>
 
-        // Borrowing from another response, this is better
-        // Putting these in variables protects you from 
-        // 1) accidentally modifying your form values
-        // 2) invalid input, if you add some basic checks, like
-        //    testing to see if the length is > 0, doesn't contain
-        //    bad characters, etc.
-        var firstName = $('#firstName').val(),
-            lastName  = $('#lastName').val(),
-            phone     = $('#phoneNumber').val(),
-            address   = $('#address').val();
+ <p>
+ <label>Submit
+ <input type="submit" name="submit" id="submit" value="Submit" />
+ </label>
+ </p>
+ </form>
 
-        // get a reference to the div you want to populate
-        var $out = $("#output");
-
-        // This is a better way of dealing with this
-        // because every call to .append() forces DOM
-        // reparsing, and if you do this too often, it can cause
-        // browser slowness. Better to put together one string
-        // and add it all at once.
-        $out.html("<p>" + firstName + "</p>" + 
-                  "<p>" + $('#lastName').val() + "</p>" +
-                  "<p>" + $('#phoneNumber').val() + "</p>" + 
-                  "<p>" + $('#address').val() + "</p>");                    
-    });
-});
-</script>
+ <?php
+    $msg = $_POST["msg"];
+    $name = $_POST["name"];
+    $posts = file_get_contents("posts.txt");
+    $posts = "$msg - $name\n" . $posts;
+    file_put_contents("posts.txt", $posts);
+    echo $posts;
+ ?>
   </body>
 </html>
