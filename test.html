@@ -74,28 +74,30 @@
   </div>
 </div>
 </div>
- <form id="form1" name="form1" method="post" action="">
- <label>Please type in a message
- <input type="text" name="msg" id="msg" />
- </label>
- <label>and your name
- <input type="text" name="name" id="name" />
- </label>
+ <form id="cvinput">
+    education<br>
+    <input type="text" name="degree" value="degree">
+    <input type="text" name="institution" value="institution">
+    <input type="text" name="year" value="year"><br>
+  <br>selected exhibition<br>
+    <input type="text" name="title" value="title">
+    <input type="text" name="venue" value="venue">
+    <input type="text" name="year" value="year"><br><br>
+   <input type="submit">
+</form>
+<div id="result"> </div>
 
- <p>
- <label>Submit
- <input type="submit" name="submit" id="submit" value="Submit" />
- </label>
- </p>
- </form>
 
- <?php
-    $msg = $_POST["msg"];
-    $name = $_POST["name"];
-    $posts = file_get_contents("posts.txt");
-    $posts = "$msg - $name\n" . $posts;
-    file_put_contents("posts.txt", $posts);
-    echo $posts;
- ?>
+<script>
+$("#cvinput").submit(function(event) {
+  $("#result").html("");
+  $('#cvinput input').each(function(index) {
+    var input = $(this);
+    $("#result").append('Name: ' + input.attr('name') + '  Value: ' + input.val() + '<br />');
+   console.log('Name: ' + input.attr('name') + '  Value: ' + input.val());
+ })
+return false;
+});
+</script>
   </body>
 </html>
