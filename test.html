@@ -74,29 +74,28 @@
   </div>
 </div>
 </div>
- <form id="cvinput">
-    education<br>
-    <input type="text" name="degree" value="degree">
-    <input type="text" name="institution" value="institution">
-    <input type="text" name="year" value="year"><br>
-  <br>selected exhibition<br>
-    <input type="text" name="title" value="title">
-    <input type="text" name="venue" value="venue">
-    <input type="text" name="year" value="year"><br><br>
-   <input type="submit">
-</form>
-<div id="result"> </div>
+ <div id='game'>
+    <form id='user-input'>
+        <input type='text' id='guess-value' placeholder='1-100'></input>
+        <button id='submit'>Submit</button>
+    </form>
+     <h4 id='guess-count'>Attempts left: <span id="attempts">6</span></h4> 
+</div>
 
+<h4 id='checker'>The value entered is <span id="value">?</span></h4>
 
+<input type="button" id="myButt" value="Show Value" />
 <script>
-$("#cvinput").submit(function(event) {
-  $("#result").html("");
-  $('#cvinput input').each(function(index) {
-    var input = $(this);
-    $("#result").append('Name: ' + input.attr('name') + '  Value: ' + input.val() + '<br />');
-   console.log('Name: ' + input.attr('name') + '  Value: ' + input.val());
- })
-return false;
+  var guess;
+$('#submit').on("click", function (evnt) {
+    guess = $('#guess-value').val();
+    $("#value").text(guess);
+    alert(guess);
+    evnt.preventDefault();
+});
+
+$('#myButt').click(function(){
+   alert( guess ); 
 });
 </script>
   </body>
