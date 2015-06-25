@@ -4,7 +4,32 @@
   <script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
   <script>tinymce.init({selector:'textarea',plugins:'fullscreen',toolbar:'fullscreen'});</script>
   <style type="text/css">
-    textarea{height:100%;}
+    * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0; 
+    margin: 0; 
+}
+
+body {
+    background-color: #0099cc;
+    color: #ffffff;
+    font-size: 180%;
+    margin: 10px;
+}
+
+.centre {
+    text-align: center;
+}
+
+textarea {  /* position is inherited */
+    left: 0; 
+    top: 0; 
+    right: 0;
+    bottom: 100px;  /* Actually the height of select and input */
+    width: 100%;
+}
   </style>
   </head>
   <body>
