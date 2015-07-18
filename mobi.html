@@ -1,2 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+<head>
+<link rel="shortcut icon" href="http://antifavicon.com/genicon2.cgi?txttop=A&txtbot=&fgtop=%23FFFFFF&fgbot=%23FFFFFF&bgtop=%23b400b4&bgbot=%23b400b4&bcolor=%23000000&drawborder=no" />
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Affordemy</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!--<script>
+      $(window).on('resize load', function() {
+    $('body').css({"padding-top": $(".navbar").height() + "px"});
+    });
+    </script>-->
+    <style type="text/css">
+      body {font-family:franklin gothic book; text-align:center;}
+      .wrap{padding-left:2em;padding-right:2em;}
+      .panel-heading{padding:1em;}
+      #st{background:rgb(180,0,180);color:white;}
+      .col-md-4{text-align:justify;font-size:1.2em;}
+      #motto{padding-left:3em;text-align:left;}
+      .btn btn-info btn-md{
+      display:inline-block;
+      -ms-transform: rotate(70deg); /* IE 9 */
+      -webkit-transform: rotate(70deg); /* Chrome, Safari, Opera */
+      transform: rotate(70deg);
+      }
+      #welcome{text-align:left;}
+      p{font-size:1.5em;
+    </style>
+<script src=
+"http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body ng-app="myNoteApp" ng-controller="myNoteCtrl">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="http://sbonakaliso.github.io/tutor/home">Affordemy</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="http://sbonakaliso.github.io/tutor/index.html"><span class="glyphicon glyphicon-home"></span> TutorialRoom</a></li>
+        <li><a href="http://sbonakaliso.github.io/tutor/mobi"><span class="glyphicon glyphicon-phone"></span> Mobile TutorialRoom</a></li>
+        <li><a href="http://sbonakaliso.github.io/tutor/find-a-tutor" target="_blank"><span class="glyphicon glyphicon-search"></span> Find a tutor</a></li>
+        <li><a href="http://sbonakaliso.github.io/tutor/join.html" target="_blank"><span class="glyphicon glyphicon-user"></span> Become a tutor</a></li>
+        <li><a href="http://sbonakaliso.github.io/tutor/pricing.html" target="_blank"><span class="glyphicon glyphicon-shopping-cart"></span> Pricing</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://www.facebook.com/thetutorialcentre"><span class="glyphicon glyphicon-thumbs-up"></span> Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<h2>Start Writting | Affordemy</h2>
+
+
+<textarea ng-model="message" cols="90" rows="40"></textarea>
+
+<p>
+<button ng-click="save()">Save</button>
+<button ng-click="clear()">Clear</button>
+</p>
+
+
+<script>
+var app = angular.module("myNoteApp", []);
+app.controller("myNoteCtrl", function($scope) {
+    $scope.message = "";
+    //$scope.left  = function() {return 110 - //$scope.message.length;};
+    $scope.clear = function() {$scope.message = "";};
+    $scope.save  = function() {alert("Note Saved");};
+});
+</script>
+
+</body>
+</html>
