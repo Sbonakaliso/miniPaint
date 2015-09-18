@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+	<title>Omnilearn</title>
+	<style type="text/css">
+	body{
+		background: white;
+		color: rgb(0,162,232);
+		font-family: franklin gothic book;
+		text-align: center;
+		margin: 0;
+		padding-bottom: 50px;
+	}
+	div{
+		font-size: 120%;
+		margin: 16px 45px;
+	}
+	span{
+		color: rgb(255,0,128);
+	}
+	a{
+		color: rgb(255,0,128);
+	}
+	.btn{
+		border-radius: 16px;
+		background: rgb(0,162,232);
+		color: white;
+		font-weight: bold;
+		font-size: 120%;
+		border: none;
+		cursor: pointer;
+		margin:2em;
+	}
+	hr{
+		color: rgb(0,162,232);
+		background: rgb(0,162,232);
+		height: 3px;
+	}
+	</style>
+</head>
+<body>
+<header><h1>Undistance.me</h1></header>
+Rearranging Learning<hr>
+<div>
+We enable learning/teaching when learners and their teachers are not together.<br> Learning can take place on Omnilearn via computers, tablets or even smartphones. 
+All you need is a computer or mobile device with Google Chrome, Firefox or Opera and a <a href="#">stylus pen</a>
+</div>
+<a href="ultimate.html" class="btn">Try Stylus Mode</a>
+<a href="ultimate.html" class="btn">Try Accounting Mode</a>
+</body>
+</html>
