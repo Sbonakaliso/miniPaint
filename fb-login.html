@@ -109,6 +109,15 @@
 	    js.src = "//connect.facebook.net/en_US/sdk.js";
 	    fjs.parentNode.insertBefore(js, fjs);
 	  }(document, 'script', 'facebook-jssdk'));
+	  
+	  FB.getLoginStatus(function(response) {
+  	if (response.status === 'connected') {
+	  console.log('Logged in.');
+	 }
+  	else {
+	  FB.login();
+	 }
+	});
 	</script>
 	
 <header><h1><span class="logo2">Edu</span><span class="logo1">frenzy</span></h1></header>
