@@ -1,7 +1,14 @@
 <!doctype html>
 <html>
 <head>
-	<title>FundaApp</title>
+	<title>Edufrenzy</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<!-- Latest compiled and minified CSS -->
+    	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    	<!-- jQuery library -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    	<!-- Latest compiled JavaScript -->
+    	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<style type="text/css">
 	body{
 		background: white;
@@ -85,6 +92,25 @@
 	</style>
 </head>
 <body>
+	
+	<script>
+  	window.fbAsyncInit = function() {
+	  FB.init({
+	    appId      : '1647057408897298',
+	    xfbml      : true,
+	    version    : 'v2.4'
+	  });
+  	};
+	
+  	(function(d, s, id){
+	    var js, fjs = d.getElementsByTagName(s)[0];
+	    if (d.getElementById(id)) {return;}
+	    js = d.createElement(s); js.id = id;
+	    js.src = "//connect.facebook.net/en_US/sdk.js";
+	    fjs.parentNode.insertBefore(js, fjs);
+	  }(document, 'script', 'facebook-jssdk'));
+	</script>
+	
 <header><h1><span class="logo2">Edu</span><span class="logo1">frenzy</span></h1></header>
 <div>
 To use <span class="funda">Edu</span><span class="app">Frenzy</span> you need to login with Facebook.
