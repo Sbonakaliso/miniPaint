@@ -55,8 +55,17 @@ body{
 		margin: 16px;
 		text-decoration: none;
 	}
+	.try:hover{
+		color:white;
+	}
 	a{
 		text-decoration: none;
+	}
+	a:hover{
+		text-decoration:none;
+	}
+	a:active{
+		text-decoration:none;
 	}
 	.funda{
 		color: rgb(0,162,232);
