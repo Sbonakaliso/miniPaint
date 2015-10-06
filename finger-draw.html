@@ -1,54 +1,62 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>HTML5 multi-touch</title>
-  <script>
-    var canvas;
-    var ctx;
-    var lastPt = new Object();
-    var colours = ['red', 'green', 'blue', 'yellow', 'black'];
- 
-    function init() {
-      var touchzone = document.getElementById("mycanvas");
-      touchzone.addEventListener("touchmove", draw, false);
-      touchzone.addEventListener("touchend", end, false);   
-      canvas = document.getElementById('mycanvas');
-      ctx = canvas.getContext("2d");
-    }
- 
-    function draw(e) {
-      e.preventDefault();
- 
-      //Iterate over all touches
-      for(var i=0;i<e.touches.length;i++) {
-        var id = e.touches[i].identifier;   
-        if(lastPt[id]) {
-          ctx.beginPath();
-          ctx.moveTo(lastPt[id].x, lastPt[id].y);
-          ctx.lineTo(e.touches[i].pageX, e.touches[i].pageY);
-          ctx.strokeStyle = colours[id];
-          ctx.stroke();
- 
-        }
-        // Store last point
-        lastPt[id] = {x:e.touches[i].pageX, y:e.touches[i].pageY};
+    <link rel="shortcut icon" href="http://antifavicon.com/genicon2.cgi?txttop=E&txtbot=&fgtop=%2300a2e8&fgbot=%2300a2e8&bgtop=%23ffffff&bgbot=%23ffffff&bcolor=%23ff0080&drawborder=yes" />
+	<title>Edufrenzy</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<!-- Latest compiled and minified CSS -->
+    	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    	<!-- jQuery library -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    	<!-- Latest compiled JavaScript -->
+    	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    	<link rel="stylesheet" type="text/css" href="styles/edufrenzy.css">
+    <script>
+      var canvas;
+      var ctx;
+      var lastPt = new Object();
+      var colours = ['red', 'green', 'blue', 'yellow','black'];
+      function init() {
+        var touchzone = document.getElementById("mycanvas");
+        touchzone.addEventListener("touchmove", draw, false);
+        touchzone.addEventListener("touchend", end, false);
+        canvas = document.getElementById('mycanvas');
+        ctx = canvas.getContext("2d");
       }
-  }
- 
-  function end(e) {
-    e.preventDefault();
-    for(var i=0;i<e.changedTouches.length;i++) {
-      var id = e.changedTouches[i].identifier;
-      // Terminate this touch
-      delete lastPt[id];
-    }
-  }  
- 
-  </script>
+      
+      function draw(e) {
+        e.preventDefault();
+        console.log(e);
+        
+        for(var i=0;i<e.touches.length;i++) {
+          var id = e.touches[i].identifier;
+          if(lastPt[id]) {
+            ctx.beginPath();
+            ctx.moveTo(lastPt[id].x, lastPt[id].y);
+            ctx.lineTo(e.touches[i].pageX, e.touches[i].pageY);
+            ctx.strokeStyle = colours[id%4];
+            ctx.lineWidth = 3;
+            ctx.stroke();
+          }
+          lastPt[id] = {x:e.touches[i].pageX, y:e.touches[i].pageY};
+        }
+      }
+      
+      function end(e) {
+        e.preventDefault();
+        for(var i=0;i<e.changedTouches.length;i++) {
+          var id = e.changedTouches[i].identifier;
+          delete lastPt[id];
+        }
+      }
+      
+    </script>
   </head>
+  
   <body onload="init()">
-    <canvas id="mycanvas" width="500" height="500">
-      Askies, this feature is not supported. Try the latest version of Chrome or Firefox.
+    <canvas id="mycanvas" width="700" height="500">
+      Canvas element not supported.
     </canvas>
   </body>
+  
 </html>
