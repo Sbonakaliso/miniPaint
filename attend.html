@@ -20,248 +20,27 @@
     	integrity="sha256-obxCG8hWR3FEKvV19p/G6KgEYm1v/u1FnRTS7Bc4Ii8= sha512-8Xs5FuWgtHH1JXye8aQcxVEtLqoz
     	JQAu8nhPymuRqeEslT6nJ2OgEYeS3cKiXasOVxYPN80DDoOTKWgOafU1LQ==" crossorigin="anonymous">
 	<style type="text/css">
-		.btn-block{
-			border-radius:20px;
-		}
-		.btn{
-			margin:5px 0;
-		}
-		.text-success{
-			text-align:center;
-			font-style:italic;
-		}
-		.heading{
-			padding:5px;
-		}
-		.heading, .list-group{
-			margin:10px;
-		}
-		.blu{
-			padding:40px;
-			font-size:1.2em;
-		}
-		.jumbotron{
-			margin:0px;
-			padding:20px;
-		}
-	
-		.panel{
-			margin:10px;
-		}
-		h2{
-			text-align:center;
-		}
-		.list-group-item:nth-child(odd){
-			/*background:rgba(0,162,232,0.2);*/
-		}
-		.site-name{
-			text-align:center;
-		}
+
 	</style>
 </head>
 <body>
-<ul class="nav nav-tabs">
-  <li class="active"><a aria-expanded="false" href="#home" data-toggle="tab">&Attend</a></li>
-  <li class="dropdown">
-    <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#">
-      Timetable <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-      <li class=""><a aria-expanded="false" href="#monday" data-toggle="tab">Monday</a></li>
-      <li class=""><a aria-expanded="false" href="#tuesday" data-toggle="tab">Tuesday</a></li>
-      <li class=""><a aria-expanded="false" href="#wednesday" data-toggle="tab">Wednesday</a></li>
-      <li class=""><a aria-expanded="false" href="#thursday" data-toggle="tab">Thursday</a></li>
-      <li class=""><a aria-expanded="false" href="#friday" data-toggle="tab">Friday</a></li>
-      <li class=""><a aria-expanded="false" href="#saturday" data-toggle="tab">Saturday</a></li>
-      <li class=""><a aria-expanded="false" href="#sunday" data-toggle="tab">Sunday</a></li>
-    </ul>
-  </li>
-  <li class=""><a aria-expanded="true" href="#teachers" data-toggle="tab">Teachers</a></li>
-</ul>
+<h1 class="text-primary" style="font-size:180%">&Attend</h1>
+<hr>
+<p style="font-size:120%"><span class="text-info" style="font-weight:bold">Congratulations!</span> 
+You are one of the first people to discover &Attend. The app that allows you to attend classes from 
+anywhere on your smartphone, tablet or PC. Tell your friends about your discovery!</p>
 
-<div id="myTabContent" class="tab-content">
-  <div class="tab-pane fade active in" id="home">
-  	<div class="container-fluid">
-  	<div class="container">
-    <div class="row">
-    	<div class="col-sm-4">
-    		<blockquote>
-  		<h5 class="text-default">Attend lessons from anywhere on your smartphone, tablet or PC</h5>
-		  <small style="font-size:16px">Featuring top teachers in <cite title="Source Title">Accounting, Physics, IsiZulu and many more</cite></small>
-		</blockquote>
-		<button type="button" class="btn btn-danger btn-lg btn-block" data-toggle="modal" data-target="#myModal" style="border-radius:5px;margin:10px auto">Learn more</button>
-    	</div>
-    	<div class="col-sm-8 container-fluid">
-    		<img src="http://i64.tinypic.com/wahiyt.jpg" style="width:100%;border-radius:8px">
-    	</div>
-    </div> 
-    </div>
-	
-	<!-- Trigger the modal with a button -->
+<button class="btn btn-lg btn-block btn-danger" data-toggle="collapse" data-target="#timetable">See more</button>
 
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+<div id="timetable" class="collapse">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Why use <span class="label label-primary">&Attend</span></h4>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-	  <div class="col-sm-4"><h4>Wherever you are</h4>
-	  <p>Let's face it, waking up early on a Saturday morning to prepare for school is tough. All of those
-	   negative feelings affect your concentration and by extention your perfomance. On &Attend you don't have to 
-	   wake up extra-early.
-	  <br> Some schools don't organize extra classes, this doesn't mean you don't need them. All high performers 
-	  work extra hard. &Attend has extra lessons.
-	  <br>Some classes take place at night and safety might be a concern, don't let it stop you. On &Attend you 
-	  can attend from the safety of your home.</p>
-	  </div>
-	  <div class="col-sm-4"><h4>Teachers from anywhere</h4>
-	  <p><b>FACT:</b> You prefare some teachers over others, too bad you don't choose you teacher at school. 
-	  But wait, here you can try out and choose different teachers. This is important because students 
-	  learn differently and teachers have different teaching styles.<br> Teachers from all over the country 
-	  can teach on &Attend therefore you can access more teachers than you can wish for.<br>Use 
-	  <span class="label label-success">FREE</span> classes to try out different teachers and the 
-	  <span class="label label-danger">PAID</span> classes to attend more of your favourite teachers' lessons.</p>
-	  </div>
-	  <div class="col-sm-4"><h4>Save money</h4>
-	  <p>Traveling to school costs money, this may be transport but remember time is money too. What about the 
-	  emotional distress of walking on a cold June Saturday morning, how much attension will you pay in 
-	  class while breathing into and rubbing you hands together? Traveling costs more than money. Don't travel 
-	  when you don't have to.</p>
-	  </div>
-	</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
-    </div>
+<button class="btn btn-block btn-primary" data-toggle="collapse" data-target="#monday">Monday</button>
 
-  </div>
-</div>
-	
-	
-  </div>
-  </div>
-  <div class="tab-pane fade" id="teachers">
-  	<h4 class="bg-warning heading">Teachers</h4>
-<div class="panel panel-success">
-  	<div class="panel-body">
-    	<p>Ms Cele teaches IsiZulu at LEAP School. | Admission fee to Premium Lessons is R10. | 
-    	Consultation fee is Rxx/hour.</p>
-  	</div>
+<div id="monday" class="collapse">
+<a href="text.html" class="btn btn-default btn-block">Accounting <span class="badge">15:00</span><br>
+<span class="label label-default">Mpofu</span></a>
 </div>
 
-<div class="panel panel-success">
-  	<div class="panel-body">
-    	<p>Mr Dube teaches Physical Sciences at LEAP School. | Admission fee to Premium Lessons is R10. | 
-    	Consultation fee is Rxx/hour.</p>
-  	</div>
-</div>
-
-<div class="panel panel-success">
-  	<div class="panel-body">
-    	<p>Mr Mpofu teaches Accouting at LEAP School. | Admission fee to Premium Lessons is R10. | 
-    	Consultation fee is Rxx/hour.</p>
-  	</div>
-</div>
-</div>
-  <div class="tab-pane fade" id="monday">
-  	<h4 class="bg-info heading">Monday</h4>
-  	<p class="text-success">Tap to attend</p>
-  	
-
-	 <a href="text.html" class="btn btn-default btn-lg btn-block">
-	   Accounting | Mr Mpofu
-	   <p class="list-group-item-text"> <span class="label label-success">FREE</span> <span class="label label-warning">Grade 12</span>
-	   <span class="badge">14:30</span></p>
-	 </a>
-	 <a href="text.html" class="btn btn-default btn-lg btn-block">
-	    IsiZulu | Ms Cele
-	    <p class="list-group-item-text"><span class="label label-danger">R10.00</span> <span class="label label-warning">Grade 12</span>
-	   <span class="badge">15:30</span></p>
-	  </a>
-
-
-  </div>
-  <div class="tab-pane fade" id="tuesday">
-  	<h4 class="bg-info heading">Tuesday</h4>
-  	<p class="text-success">Tap to attend</p>
-  	
-
-	 <a href="text.html" class="btn btn-default btn-lg btn-block">
-	   Physical Sciences | Mr Dube
-	   <p class="list-group-item-text"> <span class="label label-success">FREE</span> <span class="label label-warning">Grade 12</span>
-	   <span class="badge">14:30</span></p>
-	 </a>
-	 <a href="text.html" class="btn btn-default btn-lg btn-block">
-	    Accounting | Mr Mpofu
-	    <p class="list-group-item-text"><span class="label label-danger">R10.00</span> <span class="label label-warning">Grade 12</span>
-	   <span class="badge">15:30</span></p>
-	  </a>
-
-
-  </div>
-  <div class="tab-pane fade" id="wednesday">
-  	<h4 class="bg-info heading">Wednesday</h4>
-  	<p class="text-success">Tap to attend</p>
-    <p><i>No lessons posted yet.</i></p>
-  </div>
-  <div class="tab-pane fade" id="thursday">
-  	<h4 class="bg-info heading">Thursday</h4>
-  	<p class="text-success">Tap to attend</p>
-  	
-
-	 <a href="text.html" class="btn btn-default btn-lg btn-block">
-	   IsiZulu | Ms Cele
-	   <p class="list-group-item-text"> <span class="label label-success">FREE</span> <span class="label label-warning">Grade 12</span>
-	   <span class="badge">14:30</span></p>
-	 </a>
-	 <a href="text.html" class="btn btn-default btn-lg btn-block">
-	    Physical Sciences | Mr Dube
-	    <p class="list-group-item-text"><span class="label label-danger">R10.00</span> <span class="label label-warning">Grade 12</span>
-	   <span class="badge">15:30</span></p>
-	  </a>
-
- 	 
-  </div>
-  <div class="tab-pane fade" id="friday">
-  	<h4 class="bg-info heading">Friday</h4>
-  	<p class="text-success">Tap to attend</p>
-  	<p><i>No lessons posted yet.</i></p>
-  </div>
-  <div class="tab-pane fade" id="saturday">
-  <h4 class="bg-info heading">Saturday</h4>
-  	<p class="text-success">Tap to attend</p>
-  	
-
-	 <a href="text.html" class="btn btn-default btn-lg btn-block">
-	   Accounting | Mr Mpofu
-	   <p class="list-group-item-text"> <span class="label label-danger">R10.00</span> <span class="label label-warning">Grade 12</span>
-	   <span class="badge">14:30</span></p>
-	 </a>
-	 <a href="text.html" class="btn btn-default btn-lg btn-block">
-	    IsiZulu | Ms Cele
-	    <p class="list-group-item-text"><span class="label label-danger">R10.00</span> <span class="label label-warning">Grade 12</span>
-	   <span class="badge">15:30</span></p>
-	  </a>
-	 <a href="text.html" class="btn btn-default btn-lg btn-block">
-	    Physical Sciences | Mr Dube
-	    <p class="list-group-item-text"><span class="label label-danger">R10.00</span> <span class="label label-warning">Grade 12</span>
-	   <span class="badge">15:30</span></p>
-	  </a>
-
-
-  </div>
-  <div class="tab-pane fade" id="sunday">
-  	<h4 class="bg-info heading">Sunday</h4>
-  	<p class="text-success">Tap to attend</p>
-  	<p><i>No lessons posted yet.</i></p>
-  </div>
 </div>
 </body>
 </html>
