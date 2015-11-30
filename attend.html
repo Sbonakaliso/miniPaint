@@ -30,7 +30,40 @@
 You are one of the first people to discover &Attend. The app that allows you to attend classes from 
 anywhere on your smartphone, tablet or PC. Tell your friends about your discovery!</p>
 
-<button class="btn btn-lg btn-block btn-danger" data-toggle="collapse" data-target="#timetable">See more</button>
+
+<button type="button" class="btn btn-info btn-lg btn-block" data-toggle="modal" data-target="#learnmore">Learn more</button>
+
+<!-- Modal -->
+<div id="learnmore" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span class="label label-danger">X</span></button>
+        <h4 class="modal-title text-info">How &Attend works</h4>
+      </div>
+      <div class="modal-body">
+        <li>Press the red Start button to open the timetable</li>
+        <li>Use the timetable to see which lessons are available at what time</li>
+        <li>Go to the timetable and click on a lesson to attend it</li>
+        <li>There is a monthly fee of R20 to use the app (paid at the beginning of the month)</li>
+        <li>There are free lessons and there are paid lessons</li>
+        <li>Use the free lessons to explore different teachers and see which ones you prefer</li>
+        <li>Use the paid lessons to get more lessons from that teacher</li>
+        <li>The payment system will use airtime on your phone</li>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<button class="btn btn-lg btn-block btn-danger" data-toggle="collapse" data-target="#timetable">Start</button>
 
 <div id="timetable" class="collapse">
 
@@ -119,7 +152,7 @@ anywhere on your smartphone, tablet or PC. Tell your friends about your discover
 </div>
 
 <!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#noticeboard">Notice Board</button>
+<button type="button" class="btn btn-info btn-lg btn-block" data-toggle="modal" data-target="#noticeboard">Notice Board</button>
 
 <!-- Modal -->
 <div id="noticeboard" class="modal fade" role="dialog">
@@ -128,7 +161,7 @@ anywhere on your smartphone, tablet or PC. Tell your friends about your discover
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span class="label label-danger">Close</span></button>
+        <button type="button" class="close" data-dismiss="modal"><span class="label label-danger">X</span></button>
         <h4 class="modal-title text-info">Notice Board</h4>
       </div>
       <div class="modal-body">
