@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+	<title>Skibha</title>
+	<link rel="stylesheet" type="text/css" href="bootstylepaper.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.5.0/font-awesome-4.5.0/css/font-awesome.css">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+
+	})
+	</script>	
+	<style type="text/css">
+	html{
+		overflow: hidden;
+	}
+	body{
+		background: rgb(0,0,0);
+		background-image: url("vincent6.jpg");
+		background-attachment: fixed;
+		background-size: 100%;
+	}
+	#logo{
+		position: absolute;
+		top: 0px;
+		left: 5px;
+		color: rgb(255,255,255);
+		font-size: 300%;
+		text-align: center;
+		font-family: Segoe UI Light;
+	}
+	#one{
+		position: fixed;
+		right: 0;
+		top: 40px;
+	}
+	#two{
+		position: fixed;
+		right: 0;
+		top: 90px;
+	}
+	#back1{
+		color: white;
+		width: 100%;
+		position: absolute;
+		top: 100vh;
+		min-height: 100vh;
+		font-family: franklin gothic cond;
+		font-size: 150%;
+		text-align: center;
+		z-index: 5;
+		background: rgb(0,0,0);
+		background: -webkit-linear-gradient(rgb(0,0,100),rgb(0,0,0));
+		background: -o-linear-gradient(rgb(0,0,100),rgb(0,0,0));
+		background: -moz-linear-gradient(rgb(0,0,100),rgb(0,0,0));
+		background: linear-gradient(rgb(0,0,100),rgb(0,0,0));
+
+	}
+	#back2{
+		background: white;
+		color: rgb(0,0,100);
+		position: absolute;
+		top: 200vh;
+		min-height: 100vh;
+		font-family: franklin gothic cond;
+		font-size: 150%;
+		z-index: 5;
+		width: 100%;
+	}
+	#main{
+		color: white;
+		font-family: old english text mt;
+		position: absolute;
+		top: 30vh;
+		text-align: center;
+		text-shadow:2px 2px black;
+	}
+	h1{
+		text-align: center;
+	}
+	.fa{
+		top: 80vh;
+		color: white;
+		padding: 0.5em;
+		border-radius: 50%;
+		font-size: 300%;
+
+	}
+	#down{
+		width: 100%;
+		position: absolute;
+		top: 85vh;
+		text-align: center;
+	}
+	button{
+		color: black;
+		border: solid 1px black;
+		border-radius: 3px;
+	}
+	input{
+		margin: 10px;
+		color: grey;
+		border-radius: 3px;
+		border: none;
+		padding-left: 1em;
+	}
+	input:focus{
+		box-shadow: 5px 5px 3px rgb(0,162,232);
+	}
+	button:hover{
+		box-shadow: 5px 5px 3px rgb(0,162,232);	}
+	legend{
+		font-weight: bold;
+		background: white;
+		color: rgb(0,0,100);
+		margin-top: 1em;
+	}
+	#title{
+		background: rgb(0,0,100);
+		color: white;
+		text-align: center;
+	}
+	#quote{
+		color: rgb(0,0,100);
+		margin: 2em;
+		font-style: italic;
+	}
+	</style>
+</head>
+<body>
+<h1 id="logo">Skibha</h1>
+<h1 id="main">Immortalise those special moments</h1>
+
+<p id="down"><span class="fa fa-chevron-down"></span>
+
+<div id="back1">
+Get your photo transformed into a masterpiece by the gifted hands of Luyanda.
+<!--p><img src="vincent6.jpg"></p-->
+
+<fieldset><legend>Send Luyanda an email</legend>
+<input placeholder="Your Name"><br>
+<input placeholder="Your Email"><br>
+<input placeholder="Your message" size="50">
+<button>Send</button>
+</fieldset>
+
+</div>
+<div id="back2">
+<p id="title">What keeps Luyanda passionate about art (in his words):</p>
+<p id="quote">"Beauty from within driven by ambition and the smiles of appreciation on the faces of different kinds of people. A god given talent that cheers me when I'm knocked out by life itself. It brings me nothing but joy, a feeling of acceptance and hope for the future. It begins with the face of my customer and the expression of nothing but amazement. Feeling compared to nothing in this world. Art is in my veins.... I live, eat and breathe art."</p>
+</div>
+</body>
+</html>
