@@ -1,44 +1,107 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
-<head>
-	<title>Big 5 Reunion</title>
-	<link rel="stylesheet" type="text/css" href="bootstylepaper.css">
-	<link rel="stylesheet" type="text/css" href="font-awesome-4.5.0/font-awesome-4.5.0/css/font-awesome.css">
-	<link href='https://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
-	<style type="text/css">
-	body{
-		background-image: url('https://github.com/Sbonakaliso/website/blob/master/img/big5.jpg?raw=true');
-		background-size: 100%;
-		font-family: franklin gothic cond;
-		text-align: center;
-		margin:0;
-		padding:0;
-	}
-	.curtain{
-		min-height: 100vh;
-		min-width: 100vh;
-		background: rgba(0,0,0,0.9);
-		margin:0;
-	}
-	h1{
-		font-family: "Crete Round";
-		margin-top: 0;
-		color: rgb(255,201,14);
-		font-size: 350%;
-	}
-	h2{
-		margin:2em 0 0.5em;
-		font-size: 200%;
-	}
-	</style>
-	
-</head>
-<body>
-<div class="curtain">
-<h1>The Big Five: Reunion 2016</h1>
-
-
-
-</div>
-</body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Countdown timer</title>
+    <style>
+      body {background:gray};
+      .countdownTimer {width:300px; height:63px; background-image:url(assets/images/countdown/countdownBg.png); position:relative; font-family:Arial, Helvetica, sans-serif;}
+      .dashWeeks {margin:0 0 0 34px; padding:10px 0 0; float:left; position:relative;}
+      .dashDays {margin:0 0 0 10px; padding:10px 0 0; float:left; position:relative;}
+      .dashHours {margin:0 0 0 10px; padding:10px 0 0; float:left; position:relative;}
+      .dashMinutes {margin:0 0 0 10px; padding:10px 0 0; float:left; position:relative;}
+      .dashSeconds {margin:0 0 0 16px; padding:10px 0 0; float:left; position:relative;}
+      .dash {width:37px; height:33px; background-image:url(assets/images/countdown/dashBg.png); background-repeat:no-repeat;}
+      .digit {width:12px; height:22px; color:#FFFFFF; font-size:20px; line-height:20px; text-align:center; float:left; display:block; padding:6px 0 0 4px; letter-spacing: 4px;}
+      .division {width:37px; font-size:9px; text-transform:uppercase; text-align:center; color:#AAAAAA; clear:both; position:absolute; top:40px; left:0;}
+    </style>
+  </head>
+  
+  <body>
+    <div class="countdownTimer">
+      <div class="dashWeeks">
+        <div class="dash">
+          <div class="digit" id="weeks"></div>
+          <span class="division">Weeks</span>
+        </div>
+      </div>
+    
+      <div class="dashDays">
+        <div class="dash">
+          <div class="digit" id="days"></div>
+          <span class="division">Days</span>
+        </div>
+      </div>
+    
+      <div class="dashHours">
+        <div class="dash">
+          <div class="digit" id="hours"></div>
+          <span class="division">Hours</span>
+        </div>
+      </div>
+    
+      <div class="dashMinutes">
+        <div class="dash">
+          <div class="digit" id="minutes"></div>
+          <span class="division">Minutes</span>
+        </div>
+      </div>
+      
+      <div class="dashSeconds">
+        <div class="dash">
+          <div class="digit" id="seconds"></div>
+          <span class="division">Seconds</span>
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      (function () {
+        "use strict";
+        
+        var Timer = {
+          totalSeconds: Math.floor((new Date(("March 31, 2016 10:00:00") - new Date())/1000),,
+          weeksDiv: document.getElementById("weeks"),
+          daysDiv: document.getElementById("days"),
+          hoursDiv: document.getElementById("hours"),
+          minutesDiv: document.getElementById("minutes"),
+          secondsDiv: document.getElementById("seconds"),
+          
+          pad: function(num, size) {
+            var s = num + "";
+            while (s.length < size) s = "0" + s;
+            return s;
+          },
+          
+          updateTime: function(){
+            this.weeks = Math.floor((this.totalSeconds % 31536000) / 604800);
+            this.days = Math.floor(((this.totalSeconds % 31536000) % 604800) / 86400);
+            this.hours = Math.floor(((this.totalSeconds % 31536000) % 86400) / 3600);
+            this.minutes = Math.floor((((this.totalSeconds % 31536000) % 86400) % 3600) / 60);
+            this.seconds = (((this.totalSeconds % 31536000) % 86400) % 3600) % 60;
+          },
+          
+          updateDisplay:function(){
+            this.weeksDiv.innerHTML = this.pad(this.weeks, 2);
+            this.daysDiv.innerHTML = this.pad(this.days, 2);
+            this.hoursDiv.innerHTML = this.pad(this.hours, 2);
+            this.minutesDiv.innerHTML = this.pad(this.minutes, 2);
+            this.secondsDiv.innerHTML = this.pad(this.seconds, 2);
+          },
+          
+          countdown: function(){
+            Timer.updateTime();
+            Timer.updateDisplay();
+            if (Timer.totalSeconds === 0){
+              window.alert("Time's up!");
+            } else {
+              Timer.totalSeconds -= 1;
+              window.setTimeout(Timer.countdown, 1000);
+            }
+          }
+        };
+        Timer.countdown();
+      }());
+    </script>
+  </body>
 </html>
