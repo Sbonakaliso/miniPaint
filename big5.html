@@ -5,9 +5,19 @@
     <link href='https://fonts.googleapis.com/css?family=Monofett' rel='stylesheet' type='text/css'>
     <style>
       body{
+        padding:0;
+      }
+      .blur{
         background-image:url('https://github.com/Sbonakaliso/website/blob/master/img/big5.jpg?raw=true');
         background-size:100%;
         background-attachment:fixed;
+        min-width:100vw;
+        min-height:100vh;
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
       }
       h1{
         font-family:'Monofett';
@@ -22,8 +32,10 @@
     </style>
   </head>
   <body>
+    <div class="blur">
     <div class="wrap"><
     <h1>The Big 5 Reunion, 2016</h1>
+    </div>
     </div>
   </body>
 </html>
