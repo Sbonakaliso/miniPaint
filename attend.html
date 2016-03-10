@@ -16,9 +16,21 @@
 			n = n > 0 ? n - 1 : 6; // zero is sunday, not monday in javascript
 
 			$('.tab-pane').eq(n).addClass('in active');
+			
+			//tabs slide function
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {    
+    				var target = $(this).attr('href');
+
+    				$(target).css('left','-'+$(window).width()+'px');   
+    				var left = $(target).offset().left;
+    				$(target).css({left:left}).animate({"left":"0px"}, "10");
+})
 		})
 	</script>
 	<style type="text/css">
+	.tab-content .tab-pane {    
+	  position: relative;
+	}
 	html{
 		overflow-x:hidden; 
 	}
