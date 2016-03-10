@@ -14,9 +14,8 @@
 			var n = d.getDay();
 
 			n = n > 0 ? n - 1 : 6; // zero is sunday, not monday in javascript
-			$('#monday').removeClass('in');
 
-			$('.dayofweek').eq(n).addClass('in active');
+			$('.tab-pane').eq(n).addClass('in active');
 		})
 	</script>
 	<style type="text/css">
