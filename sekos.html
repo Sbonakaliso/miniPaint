@@ -19,156 +19,96 @@
 	
 	<script type="text/javascript">
 	</script>
-	<style type="text/css">
-	.address{
-		color:rgb(0,0,0);
-		background:rgba(255,255,255,0.5);
-		padding:0.4em;
-	}
-	.btn-face{
-		color:white;
-		font-weight:bold;
-		background:rgb(57,89,158);
-	}
-	.btn-face:hover{
-		background:white;
-		font-size:120%;
-		font-weight:bold;
-		color:rgb(57,89,158);
-	}
-	.btn-face:active{
-		background:white;
-		font-size:120%;
-		font-weight:bold;
-		color:rgb(57,89,158);
-	}
-	.btn-call{
-		border:solid 2px rgb(255,0,128);
-		color:white;
-		font-weight:bold;
-		cursor:default;
-	}
-	.btn-call:hover{
-		border:solid 2px rgb(255,0,128);
-		color:white;
-		font-weight:bold;
-		cursor:default;
-	}
-	.btn-call:active{
-		border:solid 2px rgb(255,0,128);
-		color:white;
-		font-weight:bold;
-		cursor:default;
-	}
-	p{
-		font-size:140%;
-		margin:0.5em;
-	}
+<style type="text/css">
 	body{
-		font-family: 'Pompiere';
-		text-align:center;
+		background: rgba(255,100,100,0.2);
+		font-family: century gothic;
+		text-align: center;
 	}
-	#myCarousel{
-		height: 100vh;
-		z-index: 100;
-		overflow: hidden;
-		margin:0;
+	h6{
+		display: inline;
 	}
-	.fa-angle-left,.fa-angle-right{
-		position: absolute;
-		top: 50vh;
-		font-size: 300%;
+	img{
+		width: 90%;
 	}
-	.carousel-caption{
-		position: fixed;
+	.catalogue{
+		font-size: 400%;
+		font-family: edwardian script itc;
+		color: rgb(100,0,100);
 	}
-	.carousel-caption>h3{
-		background: rgba(0,0,100,0.2);
-		display: none;
+	.brandname{
+		font-family: segoe ui light;
 	}
-	input,textarea{
-		color: rgb(0,0,100);
-		margin: 5px;
-		font-size: 140%;
-		padding: 3px;
-		display: none;
-	}
-	button{
-		background: rgb(0,0,100);
+	.btn-fb{
+		background: rgb(57,89,158);
 		color: white;
 		font-weight: bold;
-		display: none;
 	}
-	.overlay{
+	.panel-contact{
+		margin: 1em;
 		font-size: 140%;
-		color: white;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		z-index: 9999;
-		background: rgba(100,0,100,0.8);
-	}
-	.carousel-indicators,.carousel-control{
-		display: none;
-	}
-	#logo{
-		border:solid 2px white;
 	}
 	</style>
 </head>
 <body>
-<div class="overlay">
-<p style="text-align:center"><img src="https://github.com/Sbonakaliso/website/blob/master/sekos%20logo.png?raw=true" id="logo"></p>
-<p>Uniquely friendly salon experience<br>
-No more bad hair days.<br>We are Sekos Nuluk
- Salon</p>
- <a href="https://web.facebook.com/Sekos-nuluk-salon-1087300987967786/timeline" class="btn btn-lg btn-face"><i class="fa fa-facebook-official"></i> More info & pics</a>
- <a href="#" class="btn btn-lg btn-call"><i class="fa fa-phone"></i> 079 816 6250</a><br><br>
- <span class="address"><i class="fa fa-map-marker"></i> 1005 Kilmanjaro Street, Klipfontein View, Midrand</span>
-</div>
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="https://z-1-scontent-mxp1-1.xx.fbcdn.net/hphotos-xpl1/v/t1.0-9/10415672_1124690537562164_5009043497907917393_n.jpg?oh=b7bb55a1118d0474dcc41a4c4dfa0399&oe=5794C6A4">
-  
-    </div>
-
-    <div class="item">
-      <img src="https://z-1-scontent-mxp1-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/10014552_1124690200895531_7492888077049464491_n.jpg?oh=a65fb35d9ae21c83322c19bbfb182b88&oe=5782CA2E">
-      
-    </div>
-
-    <div class="item">
-      <img src="https://z-1-scontent-mxp1-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/12241428_1124689914228893_7300007037257153287_n.jpg?oh=afd86130c9b5fb5a1a0ca8265edc1462&oe=57879E91">
-      
-    </div>
-
-    <div class="item">
-      <img src="https://z-1-scontent-mxp1-1.xx.fbcdn.net/hphotos-xla1/v/t1.0-9/1512641_1124689784228906_8979985574602761999_n.jpg?oh=f1aa3be9aa211e401b0143c77fdb0fb0&oe=574D03A0">
-      
-    </div>
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="brandname">Sekos Nuluk Salon</h1>
+    <p class="second">Uniquely friendly salon experience and
+		no more bad hair days.</p>
+	<p><a href="#" class="btn btn-fb"><i class="fa fa-facebook-official"></i> Connect with us</a></p>
   </div>
+</div>
 
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="fa fa-angle-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="fa fa-angle-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div> -->
+<h2 class="catalogue">Style Catalogue</h2>
+<div class="row">
+<div class="col-sm-4">
+<div class="panel panel-default">
+  <div class="panel-body"><img src="https://z-1-scontent.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/12241428_1124689914228893_7300007037257153287_n.jpg?oh=afd86130c9b5fb5a1a0ca8265edc1462&oe=57879E91"></div>
+  <div class="panel-footer"><h6><span class="label label-danger">Hairstyle Name</span></h6> <span class="label label-info">Price</span></div><div class="one"></div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body"><img src="https://z-1-scontent.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/10258511_1124689674228917_3793609173856057840_n.jpg?oh=1d9b754b9e1dadb74222261ebad345d7&oe=574E53A1"></div>
+  <div class="panel-footer"><h6><span class="label label-danger">Hairstyle Name</span></h6> <span class="label label-info">Price</span></div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body"><img src="https://z-1-scontent.xx.fbcdn.net/hphotos-xla1/v/t1.0-9/1512641_1124689784228906_8979985574602761999_n.jpg?oh=f1aa3be9aa211e401b0143c77fdb0fb0&oe=574D03A0"></div>
+  <div class="panel-footer"><h6><span class="label label-danger">Hairstyle Name</span></h6> <span class="label label-info">Price</span></div>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="panel panel-default">
+  <div class="panel-body"><img src="https://z-1-scontent.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/167431_1124689894228895_1788052326249745756_n.jpg?oh=037746cc374c0464a2271c90ae671d3d&oe=57506CBF"></div>
+  <div class="panel-footer"><h6><span class="label label-danger">Hairstyle Name</span></h6> <span class="label label-info">Price</span></div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body"><img src="https://z-1-scontent.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/10014552_1124690200895531_7492888077049464491_n.jpg?oh=a65fb35d9ae21c83322c19bbfb182b88&oe=5782CA2E"></div>
+  <div class="panel-footer"><h6><span class="label label-danger">Hairstyle Name</span></h6> <span class="label label-info">Price</span></div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body"><img src="https://z-1-scontent.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/12705507_1124690417562176_3259771749375488314_n.jpg?oh=43cca46c025b5e39d3013796d5ed245b&oe=574A85BB"></div>
+  <div class="panel-footer"><h6><span class="label label-danger">Hairstyle Name</span></h6> <span class="label label-info">Price</span></div>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="panel panel-default">
+  <div class="panel-body"><img src="https://z-1-scontent.xx.fbcdn.net/hphotos-xlf1/v/t1.0-9/12814034_1116785871685964_7039119956629435410_n.jpg?oh=d2b5cf9f797df2ff26bdf5eea64d03da&oe=57989F59"></div>
+  <div class="panel-footer"><h6><span class="label label-danger">Hairstyle Name</span></h6> <span class="label label-info">Price</span></div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body"><img src="https://z-1-scontent.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/12742340_1113712448659973_1929223209774820874_n.jpg?oh=2aa691ff5b42b431a953491eed96be9e&oe=57558F70"></div>
+  <div class="panel-footer"><h6><span class="label label-danger">Hairstyle Name</span></h6> <span class="label label-info">Price</span></div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body"><img src="https://z-1-scontent.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/10367193_1113712328659985_4171036277963407424_n.jpg?oh=f3ad39a0cafa9bc7b5f30bbc31ed8602&oe=574B17C0"></div>
+  <div class="panel-footer"><h6><span class="label label-danger">Hairstyle Name</span></h6> <span class="label label-info">Price</span></div>
+</div>
+</div>
+</div>
+
+<div class="panel panel-info panel-contact">
+  <div class="panel-body"><span class="label label-info"><i class="fa fa-phone"></i> 079 816 6250</span> | <i class="fa fa-map-marker"></i> 1001 Kilimanjaro Street, Klipfotein View, Midrand</div>
+</div>
+
 </body>
 </html>
